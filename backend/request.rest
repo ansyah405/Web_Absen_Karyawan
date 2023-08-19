@@ -1,0 +1,74 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "ardiansyah",
+    "email": "aa@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+//get all user
+GET http://localhost:5000/users
+
+###
+//get single user
+GET http://localhost:5000/users/9e7af847-abd3-4b88-967a-ca3c2eb2f32b
+
+###
+//update
+PATCH http://localhost:5000/users/9e7af847-abd3-4b88-967a-ca3c2eb2f32b
+Content-Type: application/json
+
+{
+    "name": "Ardiandsya",
+    "email": "Ardi@gmial.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete
+DELETE http://localhost:5000/users/9e7af847-abd3-4b88-967a-ca3c2eb2f32b
+
+###
+DELETE http://localhost:5000/users/32647efb-375c-4153-8f2c-28834ce53e12
+
+###
+//login
+//create user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "aa@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+//logout
+DELETE  http://localhost:5000/logOut
+
+###
+GET http://localhost:5000/Absens
+
+###
+//post absen
+POST http://localhost:5000/Absens
+Content-Type: application/json
+
+{
+    "name": "Ardi",
+    "waktu": "6465465",
+    "bukti": "aafa.jpg"
+}
+
+###
+GET http://localhost:5000/Absens/101b5003-525c-49d5-bd73-45a7c8d3b77d
